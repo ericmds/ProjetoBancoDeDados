@@ -1,0 +1,5 @@
+• Banco de dados é uma agrupamento de dados, geralmente armazenado de forma estruturada para faciliar o acesso, gestão e manipulação desses dados
+  Banco de dados -> Tabelas -> Registros -> Campos
+  1º Arquivos Sequencias, Arquivos de Acesso Direto
+• Banco de dados, Sistema Gerenciados, Linguagem de Exploração, Programas Adicionais
+  Modelo hierárquico, Modelo em Rede, Modelo Relacional
