@@ -1,5 +1,30 @@
-• Banco de dados é uma agrupamento de dados, geralmente armazenado de forma estruturada para faciliar o acesso, gestão e manipulação desses dados
-  Banco de dados -> Tabelas -> Registros -> Campos
-  1º Arquivos Sequencias, Arquivos de Acesso Direto
-• Banco de dados, Sistema Gerenciados, Linguagem de Exploração, Programas Adicionais
-  Modelo hierárquico, Modelo em Rede, Modelo Relacional
+• Definição
+  - Banco de dados armazena, organizada e gerencia os dados que podem ser acessada e manipulada de maneira eficiente.
+
+• Componentes de um Banco de Dados
+  - Dados: Informações armazenadas, como nome, endereço, etc.
+  - DBMS (Sistema de Gerenciamento de Banco de Dados): Software que gerencia o banco de dados (ex: MySQL, PostgreSQL).
+  - Esquema: Estrutura que define como os dados são organizados.
+  - Tabelas: Estruturas de dados organizadas em linhas e colunas.
+  - Relacional vs. Não Relacional:
+    -- Relacional (SQL): Usa tabelas e relacionamentos (ex: MySQL, Oracle).
+    -- Não Relacional (NoSQL): Armazena dados de forma mais flexível (ex: MongoDB, Redis).
+
+• Modelos de Banco de Dados
+  - Modelo Relacional: Organiza dados em tabelas e usa chaves primárias e estrangeiras para relações.
+  - Modelo Não Relacional: Armazena dados em formatos flexíveis como documentos, grafos, ou chaves-valor.
+
+• Operações Básicas
+  - CRUD:
+    -- Create: Criar ou adicionar dados.
+    -- Read: Ler ou consultar dados.
+    -- Update: Atualizar dados existentes.
+    -- Delete: Excluir dados.
+
+SGB
+
+Criação do banco
+Manipulação dos dados
+Integridade dos dados
+Segurança
+Backup
