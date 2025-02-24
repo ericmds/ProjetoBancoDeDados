@@ -1,0 +1,5 @@
+• Modelar e projetar um sistema e um banco de dado
+  - Modelar é planjear o que é necessário em um sistema
+  - Projetar é ver como e de que o sistema vai ser feito
+
+  Sistema de obra, pode controlar os serviços, primeira entidade obra, segunda entidade proprietário, toda obra deve possuir um terceira entidade engenheiro, e precisa de quarta entidade pedreiros
