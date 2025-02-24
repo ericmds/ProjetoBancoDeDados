@@ -2,4 +2,14 @@
   - Modelar é planjear o que é necessário em um sistema
   - Projetar é ver como e de que o sistema vai ser feito
 
-  Sistema de obra, pode controlar os serviços, primeira entidade obra, segunda entidade proprietário, toda obra deve possuir um terceira entidade engenheiro, e precisa de quarta entidade pedreiros
+• Para realizar um sistema de obras. é necessarios de algumas entidades, sendo elas: Obra, Proprietário, Engenheiro e Pedreiros
+
+• Passo a passo para construir um banco de dados
+  • Modelagem Conceitual
+    - 1º Identificar entidades
+    - 2º Identificar atributos
+      - Identificador
+    - 3º Identificar relacionamentos
+      - Qual entidade se relaciona com qual
+    - 4º Mapear cardinalidade
+    * Entidade deveser no singular
