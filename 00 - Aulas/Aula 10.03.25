@@ -1,0 +1,95 @@
+Revisão
+
+• Modelagem:
+  → Elencar
+  → Identificar
+  → Destacar requisitos (estruturas e funcionais)
+    ↳ Identificar tributos e funcionalidades
+
+• Modelagem conceitual (diagrama ER):
+  → Entidades → Tabelas
+  → Atributos → Variáveis/Colunas
+    ↳ Identificadores → Chaves primárias → Primary Key
+    ↳ Ordinários → Não são identificadores
+  → Relacionamentos
+    ↳ Associação
+    ↳ Herança
+    ↳ Dependência
+  → Cardinalidade: Quantidade de um elemento de uma tabela que se relaciona com elementos de outra tabela
+    ↳ Fundamental para definiar as chaves estrangeiras → foreign key
+      ↳ Tipos de cardinalidades
+        ↳ 1..1
+        ↳ 1..n ou 1..*
+        ↳ n..n ou *..*
+(Dar preferencia para usar uma chave primárias)
+
+• Modelagem lógica
+  → Transformação de entidades em tabelas
+  → Definição de chaves estrangeiras a partir da cardinalidade
+    ↳ 1..1 → A chave estrangeira pode estar em qualquer uma das entidades 
+    ↳ 1..n → A chave estrangeira vai para o lado da tabela da entidade que tem o "n"
+    ↳ n..n → Cria-se uma terceira tabela, onde as chaves primárias das duas tabelas vão se unir/juntar na tabela criada
+
+Exemplos 1
+
+Area(codArea, Descrição)    Projeto (codProjeto, titulo,...,codArea)
+Area(1, "Tecnologia")       Projeto(100, "Sensores de desempenho, ... , 1")
+Area(2, "Saúde")            Projeto(101, "Aldeia indigena ... , 4")            
+Area(3, "Sociais")          Projeto(102, "Sensores de sono, ... , 1")
+Area(4, "Humana")           Projeto(103, "Sensores agriculas, ... , 1")
+
+*** (O n puxa na cardinalidade) ***
+
+Exemplo 2 de tabela 1..n
+
+Aluno de universidade federal
+Aluno n
+
+
+Exemplo 3 
+
+Designer(codDesigner, nome, codMesa)
+  codMesa referencia Mesa
+
+Mesa(codMese, dimensoes, finalidade)
+
+Exemplo 4: n..n
+
+→ Conceitual
+  ↳ Pessoa (0..n) ---------- (1..n) Veículo
+
+→ Lógica
+  ↳ Pessoa(codPessoa, nome, ..., CNH)
+  ↳ Veículo(codVeículo, tipo, placa)
+  ↳ Locação(codLocação, codVeículo, codPessoa, dataRetirada, dataDevolução)
+    ↳ codVeículo referencia Veículo
+    ↳ codPessoa referencia Pessoa
+
+Exemplo 5
+
+Sistema de gestão de jogos, equipes, ranking, clubes da superliga de voleibol
+
+Pessoas, com nome, dataNascimento, apelido, CPF, telefone, email, sexo
+Treinadores é uma pessoa código do conselho
+Preparadores é uma pessoa tipo, código concelho
+Jogadores posição, altura, ...
+
+Times com nomes, lista de patrocinadores, clube, endereço, lista de centro de treinamento
+Jogos com 2 times, data, horário, clube, arbitro principal, arbitro secundário, arbitro de mesa, arbitro de mesa, placar1SetCasa, placar1SetVisitante, placar2SetCasa, placar2SetVisitante, placar3SetCasa, placar3SetVisitante, placar4SetCasa, placar4SetVisitante, placar5SetCasa, placar5SetVisitante
+
+(MVP - Minimum Valor Product - Produto de valor mínimo, para mostrar a base do programa para o cliente)
+
+*** Criando modelo lógico ***
+
+• Patrocinador(codPatrocinador, nome, endereço, campo)
+
+• TipoPessoa(codTipoPessoa, descricao)
+
+• Pessoa(codPessoa, CPF, nome, dataNasc, apelido, tipo, licencaTreinador, codigoConselhoPreparador, posicaoJogador, alturaJogador, licencaArbitro)
+  ↳ tipo referencia TipoPessoa(codTipoPessoa)
+
+• Time(CNPJ, nome, cidade,)
+
+• Pessoa_Time(treinador, time, dataInicio, dataFim)
+  ↳ treinador referencia Pessoa(CPF)
+  ↳ time referencia Time(CNPJ)
