@@ -82,14 +82,27 @@ Jogos com 2 times, data, horário, clube, arbitro principal, arbitro secundário
 *** Criando modelo lógico ***
 
 • Patrocinador(codPatrocinador, nome, endereço, campo)
+  ↳ nome é a chave primária
 
 • TipoPessoa(codTipoPessoa, descricao)
+  ↳ descrição é a chave primária
 
 • Pessoa(codPessoa, CPF, nome, dataNasc, apelido, tipo, licencaTreinador, codigoConselhoPreparador, posicaoJogador, alturaJogador, licencaArbitro)
+  ↳ CPF é chave primária
   ↳ tipo referencia TipoPessoa(codTipoPessoa)
 
 • Time(CNPJ, nome, cidade,)
+  ↳ CNPJ é a chave primária
 
-• Pessoa_Time(treinador, time, dataInicio, dataFim)
-  ↳ treinador referencia Pessoa(CPF)
+• Pessoa_Time(pessoa, time, dataInicio, dataFim)
+  ↳ Pessoa, time, dataInicio é chave primária
+  ↳ pessoa referencia Pessoa(CPF)
   ↳ time referencia Time(CNPJ)
+
+• Jogo(codJogo, data, hora, timeCasa, timeVisitante, arbitroPrincipal, arbitroSecundario)
+  ↳ codJogo é a chave primária
+  ↳ timeCasa referencia Time(CNPJ)
+  ↳ tomeVisitante referencia Time(CNPJ)
+  ↳ arbitroPrincipal referencia Pessoa(CPF)
+  ↳ arbitroSecundario referencia Pessoa(CPF)
+  
