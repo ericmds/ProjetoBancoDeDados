@@ -1,0 +1,4 @@
+• Revisão da última aula
+• Movendo do modelo conceitual para o projeto
+
+Departamento (_idDepartamento_, nome)
