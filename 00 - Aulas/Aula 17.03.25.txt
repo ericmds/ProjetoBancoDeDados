@@ -1,4 +1,16 @@
 • Revisão da última aula
 • Movendo do modelo conceitual para o projeto
 
-Departamento (_idDepartamento_, nome)
+→ Departamento (_idDepartamento_, nome)
+→ ProcessadorDeTexto (_idProcessadorTexto_, descricao)
+→ Projeto (_idProjeto_, descricao)
+→ Tipo (_idTipo_, descricao)
+→ Empregado (_idEmpregado_, nome, CPF, tipoEmpregado, CREA, gerente)        | tentar ao máximo não deicar atributos NULL|
+  ↳ tipo referencia Tipo                                                    | sempre tentar deixar em uma tabela, para melhorar o processamento|
+  ↳ gerente referencia Empregado
+→ Secretaria_ProcessadorTexto (_secretaria, processador_)
+  ↳ secretaria referencia Empregado
+  ↳ processador referencia ProcessadorTexto
+→ Engenheiro_Projeto (engenheiro, projeto)
+  ↳ engenheiro referencia Empregado
+  ↳ projeto referencia Projeto
