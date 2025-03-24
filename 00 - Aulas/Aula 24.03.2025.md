@@ -1,7 +1,8 @@
-# Revisão - Projeto de Banco de dados
+# Revisão
 
-Levantamento e análise de requisitos
-Necessidades: funcionais e estruturais
+# Projeto de Banco de dados
+ * Levantamento e análise de requisitos
+ * Necessidades: funcionais e estruturais
 # Modelagem conceitual
   * Entidades
   * Atributos
@@ -9,9 +10,9 @@ Necessidades: funcionais e estruturais
   * Relacionamentos: associação e herança
   * Cardinalidades
 # Modelegem lógica
-  Atributos estrangeiros ou chave estrangeira
-  Quem define é a cardinalidade ("o n puxa")
+  * Atributos estrangeiros ou chave estrangeira
+  * Quem define é a cardinalidade ("o n puxa")
 # Modelagem física
-  Tipos dos atributos
-  Restrições
-  Atributos
+  * Tipos dos atributos
+  * Restrições
+  * Atributos
