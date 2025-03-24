@@ -41,4 +41,5 @@
   * Uma submissão de trabalho deve conter: título, autores (que devem estar no sistema), área de onteresse (áreas de interesse são gerenciadas també, pelo sistema), resuno, palavras-chave e o arquivo contendo o artigo. 
 * O sistema deve gerenciar modelos de artigos e que serão associados a um evento. 
   * Um evento tem um coordenador, um título, data de entrega de trabalho, modelo de artigo. 
-* Uma vez que uma submissão de trabalho é cadastrada, o coodernador do evento precisa delegar 2 avaliadores, criando uma avaliação online, em que os avaliadores escrevem um parecer e informam SIM ou Não ao artigo. * Ou seja, se ele foi ou não aceito para a publicação.
+* Uma vez que uma submissão de trabalho é cadastrada, o coodernador do evento precisa delegar 2 avaliadores, criando uma avaliação online, em que os avaliadores escrevem um parecer e informam SIM ou Não ao artigo.
+* Ou seja, se ele foi ou não aceito para a publicação.
