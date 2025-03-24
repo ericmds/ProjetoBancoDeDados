@@ -52,5 +52,5 @@
   - TrabalhoSubmissao
   - Usuário
   - TipodeUsuario → Sempre tentar usar tipode usuário, pois algum dia pode aumentar os tipos de usuario do banco, evita dor de cabeça
-  →→→→→→→→→→→→→→→→→ Sempre colocar no sistema um membro ADMINISTRADOR, o qual terá acesso a tudo, sem restrições
+  →→→→→→→→ Sempre colocar no sistema um membro ADMINISTRADOR, o qual terá acesso a tudo, sem restrições
   - 
