@@ -7,7 +7,7 @@
      ↳ Necessidades: funcionais e estruturais
   
   * Modelagem conceitual
-  * 
+    
      ↳ Entidades
     
      ↳ Atributos
