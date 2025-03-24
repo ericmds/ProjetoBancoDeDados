@@ -63,8 +63,8 @@ graph TD;
     Instituicao-->Evento;
     Evento-->AreaInteresse;
     Evento-->ModeloArtigo;
-    Evento-->Submissao;
-    Submissao-->Avaliacao;
-    Submissao-->Usuario;
+    Evento-->Trabalho/Submissao;
+    Trabalho/Submissao-->Avaliacao;
+    Trabalho/Submissao-->Usuario;
     Usuario-->TipoUsuario;
 ```
