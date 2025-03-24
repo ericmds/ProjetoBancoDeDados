@@ -21,4 +21,4 @@
     → Atributos
     → Duplicidade - automática ao se definir uma chave primária
     → Dependência - chave estrangeira
-        ↳ delete on: cascade ou <ins>restrict</ins>
+        ↳ delete on: cascade ou <ins> restrict </ins>
