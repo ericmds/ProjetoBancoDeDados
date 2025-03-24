@@ -49,3 +49,7 @@
 * Entidades
   - Instituição
   - Evento
+  - TrabalhoSubmissao
+  - Usuário
+  - TipodeUsuario → Sempre tentar usar tipode usuário, pois algum dia pode aumentar os tipos de usuario do banco, evita dor de cabeça
+  - 
