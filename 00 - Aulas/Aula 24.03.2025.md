@@ -2,7 +2,7 @@
 
 # Projeto de Banco de dados
  * Levantamento e análise de requisitos
- * Necessidades: funcionais e estruturais
+  * Necessidades: funcionais e estruturais
 ## Modelagem conceitual
   * Entidades
   * Atributos
