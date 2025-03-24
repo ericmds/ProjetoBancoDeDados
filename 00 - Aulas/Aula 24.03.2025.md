@@ -61,8 +61,8 @@
 ```mermaid
 graph TD;
     Instituicao-->Evento;
-    Evento-->AreaInteresse;
     Evento-->ModeloArtigo;
+    Evento-->AreaInteresse;
     Evento-->Trabalho/Submissao;
     Trabalho/Submissao-->Avaliacao;
     Trabalho/Submissao-->Usuario;
