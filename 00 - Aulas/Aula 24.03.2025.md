@@ -57,3 +57,11 @@
   - AreaDeInteresse
   - ModeloArtigo
 
+### Modelo 
+```mermaid
+graph TD;
+    EVENTO-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
