@@ -44,7 +44,7 @@
   * Uma vez que uma submissão de trabalho é cadastrada, o coodernador do evento precisa delegar 2 avaliadores, criando uma avaliação online, em que os avaliadores escrevem um parecer e informam SIM ou Não ao artigo.
   * Ou seja, se ele foi ou não aceito para a publicação.
 
-### Modelo relacional
+### Modelo lógico
 
 * Entidades
   - Instituição
@@ -57,7 +57,7 @@
   - AreaDeInteresse
   - ModeloArtigo
 
-### Modelo 
+### Modelo relacional
 ```mermaid
 graph TD;
     Instituicao-->Evento;
