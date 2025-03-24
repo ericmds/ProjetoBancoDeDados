@@ -19,7 +19,7 @@
      ↳ Cardinalidades
       
   * Modelegem lógica
-  * 
+    
      Atributos estrangeiros ou chave estrangeira
     
      Quem define é a cardinalidade ("o n puxa")
