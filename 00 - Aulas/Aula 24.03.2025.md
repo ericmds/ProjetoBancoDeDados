@@ -60,11 +60,11 @@
 ### Modelo 
 ```mermaid
 graph TD;
-    Instituição-->Evento;
-    Evento-->ÁreaInteresse;
+    Instituicao-->Evento;
+    Evento-->AreaInteresse;
     Evento-->ModeloArtigo;
-    Evento-->Submissão;
-    Submissão-->Avaliação;
-    Submissão-->Usuário;
-    Usuário-->TipoUsuário;
+    Evento-->Submissao;
+    Submissao-->Avaliacao;
+    Submissao-->Usuario;
+    Usuario-->TipoUsuario;
 ```
