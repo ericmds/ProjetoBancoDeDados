@@ -20,9 +20,9 @@
       
   * Modelegem lógica
     
-     Atributos estrangeiros ou chave estrangeira
+     ↳ Atributos estrangeiros ou chave estrangeira
     
-     Quem define é a cardinalidade ("o n puxa")
+     ↳ Quem define é a cardinalidade ("o n puxa")
   
 # ✦ Modelagem física
     → Tipos dos atributos
