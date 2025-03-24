@@ -38,7 +38,7 @@
 ## Exercício
   * Preciso de um sistema web em que se possa gerenciar eventos cientificos, separados por instituições de ensino. 
   * Uma vez que o evento científico é gerado, um coordenador autoriza a submissçao de trabalhos. 
-  * Uma submissão de trabalho deve conter: título, autores (que devem estar no sistema), área de onteresse (áreas de interesse são gerenciadas també, pelo sistema), resuno, palavras-chave e o arquivo contendo o artigo. 
+  * Uma submissão de trabalho deve conter: título, autores (que devem estar no sistema), área de onteresse (áreas de interesse são gerenciadas també, pelo sistema), resumo, palavras-chave e o arquivo contendo o artigo. 
   * O sistema deve gerenciar modelos de artigos e que serão associados a um evento. 
     * Um evento tem um coordenador, um título, data de entrega de trabalho, modelo de artigo. 
   * Uma vez que uma submissão de trabalho é cadastrada, o coodernador do evento precisa delegar 2 avaliadores, criando uma avaliação online, em que os avaliadores escrevem um parecer e informam SIM ou Não ao artigo.
@@ -49,7 +49,7 @@
 * Entidades
   - Instituição
   - Evento
-  - TrabalhoSubmissao
+  - Trabalho/Submissao
   - Usuário
   - TipodeUsuario → Sempre tentar usar tipode usuário, pois algum dia pode aumentar os tipos de usuario do banco, evita dor de cabeça
   →→→→→→→→→ Sempre colocar no sistema um membro ADMINISTRADOR, o qual terá acesso a tudo, sem restrições
@@ -60,8 +60,11 @@
 ### Modelo 
 ```mermaid
 graph TD;
-    EVENTO-->INSTITUIÇÃO;
-    EVENTO-->ÁREA_DE_INTERESSE;
-    B-->D;
-    C-->D;
+    Evento-->Instituição;
+    Evento-->ÁreaInteresse;
+    Evento-->ModeloArtigo;
+    Trabalho/Submissão-->Evento;
+    Usuário-->Trabalho/Submissão;
+    Trabalho/Submissão-->Evento
+    TipoUsuário-->Usuário;
 ```
