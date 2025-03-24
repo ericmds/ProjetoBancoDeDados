@@ -61,7 +61,7 @@
 ```mermaid
 graph TD;
     EVENTO-->INSTITUIÇÃO;
-    A-->C;
+    EVENTO-->ÁREA DE INTERESSE;
     B-->D;
     C-->D;
 ```
