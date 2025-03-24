@@ -35,7 +35,7 @@
     → Dependência - chave estrangeira
         ↳ delete on: cascade ou restrict
 
-### Exercício
+## Exercício
     * Preciso de um sistema web em que se possa gerenciar eventos cientificos, separados por instituições de ensino. 
     * Uma vez que o evento científico é gerado, um coordenador autoriza a submissçao de trabalhos. 
       * Uma submissão de trabalho deve conter: título, autores (que devem estar no sistema), área de onteresse (áreas de interesse são gerenciadas també, pelo sistema), resuno, palavras-chave e o arquivo contendo o artigo. 
@@ -44,7 +44,7 @@
     * Uma vez que uma submissão de trabalho é cadastrada, o coodernador do evento precisa delegar 2 avaliadores, criando uma avaliação online, em que os avaliadores escrevem um parecer e informam SIM ou Não ao artigo.
     * Ou seja, se ele foi ou não aceito para a publicação.
 
-### Execução
+### Modelo relacional
 
 * Entidades
   - Instituição
@@ -53,4 +53,7 @@
   - Usuário
   - TipodeUsuario → Sempre tentar usar tipode usuário, pois algum dia pode aumentar os tipos de usuario do banco, evita dor de cabeça
   →→→→→→→→→ Sempre colocar no sistema um membro ADMINISTRADOR, o qual terá acesso a tudo, sem restrições
-  - 
+  - Avaliação
+  - AreaDeInteresse
+  - ModeloArtigo
+
