@@ -60,7 +60,7 @@
 ### Modelo 
 ```mermaid
 graph TD;
-    EVENTO-->B;
+    EVENTO-->INSTITUIÇÃO;
     A-->C;
     B-->D;
     C-->D;
