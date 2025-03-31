@@ -53,13 +53,20 @@
 
 * Entidades
   - Instituição
+    
   - Evento
+    
   - Trabalho/Submissao
+    
   - Usuário
-  - TipodeUsuario → Sempre tentar usar tipode usuário, pois algum dia pode aumentar os tipos de usuario do banco, evita dor de cabeça
-                  → Sempre colocar no sistema um membro ADMINISTRADOR, o qual terá acesso a tudo, sem restrições
+    
+  - TipodeUsuario
+    - Sempre tentar usar tipode usuário, pois algum dia pode aumentar os tipos de usuario do banco, evita dor de cabeça
+    - Sempre colocar no sistema um membro ADMINISTRADOR, o qual terá acesso a tudo, sem restrições
   - Avaliação
+    
   - AreaDeInteresse
+    
   - ModeloArtigo
 
 ### Modelo relacional
