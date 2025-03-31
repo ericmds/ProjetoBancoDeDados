@@ -24,16 +24,16 @@
      ↳ Quem define é a cardinalidade ("o n puxa")
   
 # ✦ Modelagem física
-    → Tipos dos atributos
+  * Tipos dos atributos
     
-    → Restrições
+  * Restrições
     
-    → Atributos
+  * Atributos
     
-    → Duplicidade - automática ao se definir uma chave primária
+  * Duplicidade - automática ao se definir uma chave primária
     
-    → Dependência - chave estrangeira
-        ↳ delete on: cascade ou restrict
+  * Dependência - chave estrangeira
+    - delete on: cascade ou restrict
 
 ## Exercício
   * Preciso de um sistema web em que se possa gerenciar eventos cientificos, separados por instituições de ensino. 
