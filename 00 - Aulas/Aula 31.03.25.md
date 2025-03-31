@@ -98,3 +98,5 @@ public class Area {
     
 }
 ```
+
+![{229E8DBF-D789-44C4-878F-3A2C00B22683}](https://github.com/user-attachments/assets/5020dbee-96c3-4344-bb1d-b67d8d479ce8)
