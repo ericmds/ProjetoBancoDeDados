@@ -30,9 +30,9 @@
     
   * Atributos
     
-  * Duplicidade - automática ao se definir uma chave primária
+  * Duplicidade → automática ao se definir uma chave primária
     
-  * Dependência - chave estrangeira
+  * Dependência → chave estrangeira
     - delete on: cascade ou restrict
 
 ## Exercício
