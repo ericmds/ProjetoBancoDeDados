@@ -1,5 +1,6 @@
-# Exemplo 1
-## Classe Aluno
+# Arquivos
+## Exemplo 1
+### Classe Aluno
 ```java
 package Ex1;
 
@@ -23,7 +24,7 @@ public class Aluno {
 }
 ```
 
-## Classe PrincipalLeitura
+### Classe PrincipalLeitura
 ```java
 package Ex1;
 
@@ -64,7 +65,7 @@ public class PrincicipalLeitura {
 }
 ```
 
-## Classe PrincipalEscritura
+### Classe PrincipalEscritura
 ```java
 package Ex1;
 
@@ -107,8 +108,8 @@ public class PrincipalEscritura {
 }
 ```
 
-# Exemplo 2
-## Classe Arquivo
+## Exemplo 2
+### Classe Arquivo
 ```java
 package Ex2;
 
@@ -180,7 +181,7 @@ public class Arquivo {
 }
 ```
 
-## Classe Principal
+### Classe Principal
 ```java
 package Ex2;
 
