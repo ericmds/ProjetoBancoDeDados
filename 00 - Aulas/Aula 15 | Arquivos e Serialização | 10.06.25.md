@@ -304,7 +304,7 @@ public class Principal {
 }
 ```
 
-## Exemplo 2 - JSON
+## Exemplo 2 | JSON
 ### Classe Pessoa
 ```java
 package Ex2;
