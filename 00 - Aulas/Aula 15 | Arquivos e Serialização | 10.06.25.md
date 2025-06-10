@@ -211,3 +211,186 @@ public class Principal {
 	}
 }
 ```
+
+# Serialização
+## Exemplo 1 | Serialização
+### Classe Produto
+```java
+package Ex1;
+
+import java.io.Serializable;
+
+public class Produto implements Serializable {
+	private String codigo;
+	private String nome;
+	private double preco;
+	private transient String temporario;
+
+	public Produto(String codigo, String nome, double preco, String temporario) {
+		this.codigo = codigo;
+		this.nome = nome;
+		this.preco = preco;
+		this.temporario = temporario;
+	}
+
+	public String getCodigo() {
+		return codigo;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public double getPreco() {
+		return preco;
+	}
+
+	public String getTemporario() {
+		return temporario;
+	}
+
+	@Override
+	public String toString() {
+		return "Produto [Código = " + codigo + ", Nome = " + nome + ", Preco = " + preco + "]";
+	}
+}
+```
+
+Principal
+```java
+package Ex1;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Produto produto = new Produto("ABC123", "Exemplo de Produto", 9.99, "Campo temporário");
+
+		// Serialização
+		try {
+			FileOutputStream arquivoSaida = new FileOutputStream("produto.ser");
+			ObjectOutputStream objetoSaida = new ObjectOutputStream(arquivoSaida);
+
+			objetoSaida.writeObject(produto);
+			objetoSaida.close();
+			arquivoSaida.close();
+
+			System.out.println("Objeto serializado e salvo em produto.ser");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		// Desserialização
+		try {
+			FileInputStream arquivoEntrada = new FileInputStream("produto.ser");
+			ObjectInputStream objetoEntrada = new ObjectInputStream(arquivoEntrada);
+
+			Produto produtoDesserializado = (Produto) objetoEntrada.readObject();
+			objetoEntrada.close();
+			arquivoEntrada.close();
+
+			System.out.println("Objeto desserializado: " + produtoDesserializado); // Chama o método sobrescrito
+																					// toString();
+			System.out.println("Vai apresentar NULL: " + produtoDesserializado.getTemporario());
+		} catch (IOException | ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+}
+```
+
+## Exemplo 2 - JSON
+### Classe Pessoa
+```java
+package Ex2;
+
+public class Pessoa {
+	private String nome;
+	private int idade;
+
+	public Pessoa(String nome, int idade) {
+		this.nome = nome;
+		this.idade = idade;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public int getIdade() {
+		return idade;
+	}
+
+	@Override
+	public String toString() {
+		return "Pessoa [Nome = " + nome + ", Idade = " + idade + "]";
+	}
+}
+```
+
+### Classe Principal
+```java
+package Ex2;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		// Criando um objeto para serealizar
+		Pessoa p = new Pessoa("Éric", 24);
+
+		// Convertendo o objeto em um JSONObject
+		JSONObject json = new JSONObject();
+		json.put("Nome", p.getNome());
+		json.put("Idade", p.getIdade());
+		String jsonString = json.toJSONString();
+
+		gravaArquivo(jsonString);
+
+		try {
+			lerArquivo();
+		} catch (org.json.simple.parser.ParseException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void gravaArquivo(String jsonString) {
+
+		try (FileWriter fileWriter = new FileWriter("pessoa.json")) {
+			fileWriter.write(jsonString);
+			System.out.println("Arquivo person.json salvo com sucesso.");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void lerArquivo() throws org.json.simple.parser.ParseException {
+		// Lendo arquivo e desserializando o JSON para objeto
+		try (FileReader fileReader = new FileReader("pessoa.json")) {
+			JSONParser jsonParser = new JSONParser();
+			JSONObject jsonObject = (JSONObject) jsonParser.parse(fileReader);
+
+			// Criando um objeto Person a partir do JSON
+			String nome = (String) jsonObject.get("Nome");
+			long idade = (long) jsonObject.get("Idade");
+			Pessoa deserializedPerson = new Pessoa(nome, (int) idade);
+
+			System.out.println("Objeto desserializado: " + deserializedPerson);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}
+```
